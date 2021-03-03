@@ -101,7 +101,7 @@
                         <div class="col-8">
                             <div class="text-right">
                                 <h3 class="text-dark mt-1"> {{ $approved_returns_count }}</h3>
-                                <a href="{{ url('approved-uploaded-returns') }}">
+                                <a href="{{ url('approve-cheque-list') }}">
                                     <h4 class="text-muted mb-1 custom-color">Approved</h4>
                                  </a>
                                 {{--  <h4 class="text-muted mb-1 custom-color">Approved</h4>  --}}
@@ -122,7 +122,7 @@
                         <div class="col-8">
                             <div class="text-right">
                                 <h3 class="text-dark mt-1">{{ $rejected_returns_count }}</h3>
-                                <a href="{{ url('rejected-uploaded-returns') }}">
+                                <a href="{{ url('reject-cheque-list') }}">
                                     <h4 class="text-muted mb-1 custom-color">Rejected</h4>
                                  </a>
                                 {{--  <h4 class="text-muted mb-1 custom-color">Rejected</h4>  --}}

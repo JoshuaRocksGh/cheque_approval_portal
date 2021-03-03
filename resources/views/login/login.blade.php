@@ -75,13 +75,7 @@
                     @endif
 
                 </div>
-
-
-            </form>
-
-
-
-
+          </form>
             {{-- <a href="{{ url('/returns') }}">
                 <button class="btn btn-primary btn-block custom-bg-color"> Log In </button>
             </a> --}}
@@ -94,7 +88,7 @@
                 @endif
             </div> --}}
 
-        </div> <!-- end card-body -->
+        </div>
 
     </div>
 

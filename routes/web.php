@@ -1,5 +1,8 @@
 <?php
 
+use RealRashid\SweetAlert\Facades\Alert;
+
+
 use App\Http\Controllers\ApprovedController;
 use App\Http\Controllers\ApproveUploadController;
 use App\Http\Controllers\HomeController;
@@ -96,6 +99,8 @@ Route::get('/approved-cheque', [ApprovedController::class, 'index'])->name('appr
 Route::get('/reject-cheque/{cheque_id}', [RejectedController::class, 'rejected'])->name('reject-cheque');
 
 Route::get('/reject-cheque-list', [RejectedController::class, 'index'])->name('reject-cheque-list');
+
+Route::get('/rejected-cheque', [RejectedController::class, 'index'])->name('rejected-cheque');
 
 
 

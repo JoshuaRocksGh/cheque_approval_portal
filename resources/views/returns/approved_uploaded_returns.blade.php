@@ -69,7 +69,7 @@
 
                     <div class="col-md-12 card-box">
 
-                        <h3 class="text-success">Approved Cheques</h3>
+                        <h3 class=" " style="color: #98865bcc">Approved Cheques</h3>
                         <hr>
                             <table class="table table-bordered" style="zoom: 0.8;" id="datatable-styling">
 

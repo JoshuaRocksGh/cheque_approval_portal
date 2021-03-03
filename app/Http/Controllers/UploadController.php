@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Validator;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class UploadController extends Controller
 {
@@ -47,7 +49,6 @@ class UploadController extends Controller
         $uploaded_returns = DB::table('details')->where(['flag' => 'A'])->orderByDesc('id')->get();
 
         // return $uploaded_returns;
-
         return view('returns.uploaded_returns', ['uploaded_returns' => $uploaded_returns]);
     }
 
@@ -177,6 +178,7 @@ class UploadController extends Controller
     {
 
         $uploaded_returns = DB::table('tb_upload_returns')->where(['flag' => 'A'])->orderByDesc('id')->get();
+
         return view('returns.approved_uploaded_returns', ['uploaded_returns' =>$uploaded_returns]);
     }
 
@@ -193,6 +195,7 @@ class UploadController extends Controller
     {
 
         $uploaded_returns = DB::table('details')->where(['flag' => 'P'])->orderByDesc('id')->get();
+
 
         // return $uploaded_returns;
 

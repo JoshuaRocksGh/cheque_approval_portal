@@ -48,12 +48,6 @@
                    <!--  <div class="col-md-4 col-lg-4 col-xl-4 card" style="display: inline-block;position: fixed;top: 0;bottom: 0;left: 0;right: 0;width: auto;height: 390px;margin: auto;background-color: #ffffffd1"> -->
 
                               @yield('content')
-
-                        <!-- end card -->
-
-                    <!-- </div> end col -->
-              <!--   </div> -->
-                <!-- end row -->
             </div>
             <!-- end container -->
         </div>
@@ -63,6 +57,9 @@
         <footer class="footer footer-alt " >
               <a href="#" ><strong> <h4 style="color: #98865bcc">  Joshua Tetteh &copy; {{date('Y')}}</h4> </strong> </a>
         </footer>
+
+        {{-- Sweet Alert js --}}
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
         <!-- Vendor js -->
         <script src="{{asset('assets/js/vendor.min.js')}}"></script>

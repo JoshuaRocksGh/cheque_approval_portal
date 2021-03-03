@@ -34,7 +34,7 @@
 
                     <div class="col-md-12 card-box">
 
-                        <h3 class="text-success">Rejected Cheque</h3>
+                        <h3 class=" " style="color: #98865bcc">Rejected Cheque</h3>
                         <hr>
                         @if (Session::has('success'))
                             <div class="alert alert-success">
@@ -164,7 +164,7 @@
                                 <img id="img_" src='#' />
                                 <br>
 
-                                <h4>Back Back</h4>
+                                <h4>Back View</h4>
                                 <hr>
                                 <img id="img__" src='#' />
 

@@ -3,13 +3,15 @@
 
 	<head>
         <meta charset="utf-8" />
-        <title>NDK BOG</title>
+        <title>ROKEL CHEQUE PORTAL</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="csrf-token" content="{{ csrf_token() }}" />
         <!-- App favicon -->
         <!-- <link rel="shortcut icon" href="assets/images/favicon.ico"> -->
+
+
 
         @include('snippets.style')
         <style type="text/css">
@@ -42,6 +44,9 @@
         </div>
         @include('snippets.script')
 		@yield('scripts')
-        {{--  @include('sweetalert::alert')  --}}
+         @include('sweetalert::alert')
     </body>
+
+    {{-- Sweet Alert js --}}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </html>

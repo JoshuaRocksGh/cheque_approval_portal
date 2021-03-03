@@ -34,7 +34,7 @@
 
                     <div class="col-md-12 card-box">
 
-                        <h3 class="text-success">Pending cheque Approvals</h3>
+                        <h3 class=" " style="color: #99865BCC">Pending Cheque Approvals</h3>
                         <hr>
                         @if (Session::has('success'))
                             <div class="alert alert-success">
@@ -93,12 +93,12 @@
 
 
                                                     <td scope="col" class="text-center">
-                                                        <a href="{{ url('approve-cheque', ['cheque_id' => $return->id  ]) }}" class="btn btn-sm btn-success btn-rounded" id="btn-approve-return">
+                                                        <a href="{{ url('approve-cheque', ['cheque_id' => $return->id  ]) }}" class="btn btn-sm btn-success btn-rounded btn-approve-return" id="">
                                                             <i class="mdi mdi-check"></i>
                                                         </a>
 
 
-                                                        <a href="{{ url('reject-cheque', ['cheque_id' => $return->id ]) }}" class="btn btn-sm btn-danger btn-rounded">
+                                                        <a href="{{ url('reject-cheque', ['cheque_id' => $return->id ]) }}" class="btn btn-sm btn-danger btn-rounded btn-decline-return" id="">
                                                             <i class="mdi mdi-close"></i>
                                                         </a>
 
@@ -164,7 +164,7 @@
                                 <img id="img_" src='#' />
                                 <br>
 
-                                <h4>Back Back</h4>
+                                <h4>Back View</h4>
                                 <hr>
                                 <img id="img__" src='#' />
 
@@ -172,8 +172,10 @@
 
                             <div class="col-md-12">
 
-                                <button class="btn btn-success">Approved</button>
-                                <button class="btn btn-danger">Reject</button>
+
+                                    <a id="approve_cheque_link" href="#" class="btn btn-success approved">Approve</a>
+                                    <a id="reject_cheque_link" href="#" class="btn btn-danger rejected">Reject</a>
+
 
                             </div>
 
@@ -218,6 +220,9 @@
         <!-- Modal-Effect -->
         <script src="{{ asset('assets/libs/custombox/custombox.min.js') }}"></script>
 
+        {{-- Sweet Alert js --}}
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 
         <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
@@ -235,6 +240,9 @@
 
                     $("#img_").attr("src", "data:image/png;base64," + return_details.front_view);
                     $("#img__").attr("src", "data:image/png;base64," + return_details.back_view);
+
+                    $("#reject_cheque_link").attr("href", "reject-cheque/"+return_details.id);
+                    $("#approve_cheque_link").attr("href", "approve-cheque/"+return_details.id);
 
                     {{-- return false; --}}
 

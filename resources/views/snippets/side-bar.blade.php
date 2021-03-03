@@ -14,7 +14,7 @@
                     <a href="{{url('home')}}">
                         <i class="fe-airplay"></i>
                         <!-- <span class="badge badge-success badge-pill float-right">4</span> -->
-                        <span> Dashboards </span>
+                        <span> Dashboard </span>
                     </a>
                 </li>
 
