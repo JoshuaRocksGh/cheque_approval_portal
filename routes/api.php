@@ -34,4 +34,5 @@ Route::get('/approve-cheque-list', [ApiApprovedController::class, 'index'])->nam
 Route::get('/reject-cheque-list', [ApiRejectedController::class, 'index'])->name('reject-cheque-list');
 
 
+Route::get('/approve-cheque/{cheque_id}', [ApiApprovedController::class, 'approved'])->name('approve-cheque');
 

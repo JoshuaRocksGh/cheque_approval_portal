@@ -10,7 +10,8 @@ class ApiApprovedController extends Controller
     //
 
 
-    function index(){
+    function index()
+    {
         $query = DB::table('details')->where(['flag' => 'A'])->get();
 
         return response()->json([
@@ -24,21 +25,20 @@ class ApiApprovedController extends Controller
     }
 
 
-    function approved (Request $req, $cheque_id)
+    function approved(Request $req, $cheque_id)
     {
         // return $cheque_id;
         $approved_query = DB::table('details')->where(['id' => $cheque_id])->update(['flag' => 'A']);
-    if($approved_query)
-    {
+        if ($approved_query) {
 
             return response()->json([
-            'responseCode' => "000",
-            'message' => " Cheque Approval Successful",
-            'data' => null,
+                'responseCode' => "000",
+                'message' => " Cheque Approval Successful",
+                'data' => null,
 
-    ], 200);
+            ], 200);
             // Alert::alert('Cheque Approved', ' ', 'success');
-        }else{
+        } else {
             // Alert::alert('Error Occured', ' ', 'error');
 
             return response()->json([
@@ -46,11 +46,8 @@ class ApiApprovedController extends Controller
                 'message' => " Cheque Approval Failed",
                 'data' => null,
 
-        ], 200);
+            ], 200);
         }
         // return back();
     }
-
-
-
 }
