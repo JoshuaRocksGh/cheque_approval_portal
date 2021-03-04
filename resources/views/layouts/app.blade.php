@@ -33,6 +33,12 @@
             .custom-bg-color{
                 background-color: #0298b2!important;
             }
+            .gold-color{
+                color: #98865bcc!important;
+             }
+             .gold-bg-color{
+                 background-color: #98865bcc!important;
+             }
         </style>
 
     </head>
@@ -48,6 +54,12 @@
                    <!--  <div class="col-md-4 col-lg-4 col-xl-4 card" style="display: inline-block;position: fixed;top: 0;bottom: 0;left: 0;right: 0;width: auto;height: 390px;margin: auto;background-color: #ffffffd1"> -->
 
                               @yield('content')
+
+                        <!-- end card -->
+
+                    <!-- </div> end col -->
+              <!--   </div> -->
+                <!-- end row -->
             </div>
             <!-- end container -->
         </div>

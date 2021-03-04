@@ -48,9 +48,9 @@ Route::get('/upload-returns', [UploadController::class, 'index'])->name('upload-
 
 Route::get('/uploaded-returns', [UploadController::class, 'uploaded_returns'])->name('uploaded-returns');
 
-Route::get('/pending-uploaded-returns', [UploadController::class, 'pending_uploaded_returns'])->name('pending-uploaded-returns');
-Route::get('/approved-uploaded-returns', [UploadController::class, 'approved_uploaded_returns'])->name('approved-uploaded-returns');
-Route::get('/rejected-uploaded-returns', [UploadController::class, 'rejected_uploaded_returns'])->name('rejected-uploaded-returns');
+// Route::get('/pending-uploaded-returns', [UploadController::class, 'pending_uploaded_returns'])->name('pending-uploaded-returns');
+// Route::get('/approved-uploaded-returns', [UploadController::class, 'approved_uploaded_returns'])->name('approved-uploaded-returns');
+// Route::get('/rejected-uploaded-returns', [UploadController::class, 'rejected_uploaded_returns'])->name('rejected-uploaded-returns');
 
 Route::get('/approve-uploaded-return/{revisionId}/{returnTypeId}/{clearData}/{upload_id}', [ApproveUploadController::class, 'approve_uploaded_return'])->name('approve-uploaded-return');
 
@@ -86,14 +86,17 @@ Route::get('/view_users', [App\Http\Controllers\UserController::class, 'view_use
 
 
 
+Route::get('/pending-uploaded-returns', [UploadController::class, 'pending_uploaded_returns'])->name('pending-uploaded-returns');
 
 Route::get('/approve-cheque/{cheque_id}', [ApprovedController::class, 'approved'])->name('approve-cheque');
 
 Route::get('/approve-cheque-list', [ApprovedController::class, 'index'])->name('approve-cheque-list');
 
-Route::get('/approve-cheque-list', [ApprovedController::class, 'index'])->name('approve-cheque-list');
+// Route::get('/approve-cheque-list', [ApprovedController::class, 'index'])->name('approve-cheque-list');
 
 Route::get('/approved-cheque', [ApprovedController::class, 'index'])->name('approved-cheque');
+Route::get('/approved-uploaded-returns', [UploadController::class, 'approved_uploaded_returns'])->name('approved-uploaded-returns');
+
 
 
 Route::get('/reject-cheque/{cheque_id}', [RejectedController::class, 'rejected'])->name('reject-cheque');
@@ -101,6 +104,8 @@ Route::get('/reject-cheque/{cheque_id}', [RejectedController::class, 'rejected']
 Route::get('/reject-cheque-list', [RejectedController::class, 'index'])->name('reject-cheque-list');
 
 Route::get('/rejected-cheque', [RejectedController::class, 'index'])->name('rejected-cheque');
+Route::get('/rejected-uploaded-returns', [UploadController::class, 'rejected_uploaded_returns'])->name('rejected-uploaded-returns');
+
 
 
 

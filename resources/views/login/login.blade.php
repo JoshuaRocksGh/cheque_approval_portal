@@ -11,9 +11,9 @@
                 <span class="logo-lg">
                     <img src="assets/images/logoo.png" alt="" height="60" style="margin-bottom: 10px;">
 
-                    <h3 class="custom-color">
-                        <b>  </b>
-                    </h3>
+                    <h2 class="gold-color">
+                        Cheque Approval Portal
+                    </h2>
                 </span>
             </h3>
 

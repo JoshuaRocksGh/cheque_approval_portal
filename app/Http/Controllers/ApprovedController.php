@@ -26,4 +26,5 @@ class ApprovedController extends Controller
         // return $query;
         return view('returns.approved_cheque', ['uploaded_returns' =>$query]);
     }
+
 }
